@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_main"
+    android:background="@android:color/black"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/backgroundimage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/alert_dark_frame" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="116dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:srcCompat="@drawable/craftmineidle" />
+
+    <TextView
+        android:id="@+id/backgroundtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy Custom Background"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+    <TextView
+        android:id="@+id/backgroundCostText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cost: 100000000000000"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backgroundtext" />
+    <Button
+        android:id="@+id/backgroundbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="background"
+        android:backgroundTint="#27AF2D"
+        android:enabled="true"
+        android:onClick="updateBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backgroundCostText" />
+    <TextView
+        android:id="@+id/netheritetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy Netherite Armor"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backgroundbutton" />
+    <TextView
+        android:id="@+id/netheritecosttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cost: 1000000000000000"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/netheritetext" />
+    <Button
+        android:id="@+id/netheritebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Netherite"
+        android:backgroundTint="#27AF2D"
+        android:enabled="true"
+        android:onClick="buyNetherite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/netheritecosttext" />
+    <TextView
+        android:id="@+id/customplayertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy Custom Player"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/netheritebutton" />
+    <TextView
+        android:id="@+id/customplayercosttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cost: 5000000000000000"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customplayertext" />
+    <Button
+        android:id="@+id/customplayerbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custom Player"
+        android:backgroundTint="#27AF2D"
+        android:enabled="true"
+        android:onClick="buyCustomPlayer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customplayercosttext" />
+
+    <TextView
+        android:id="@+id/pickaxeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pickaxe"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+    <TextView
+        android:id="@+id/pickaxeCostText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cost: 0"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickaxeText" />
+
+    <Button
+        android:id="@+id/buttonPickaxe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#27AF2D"
+        android:text="Buy Wooden"
+        android:onClick="upgradePickaxe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickaxeCostText" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Buy Miners"
+        android:onClick="openMinersMenu"
+        android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
+        android:backgroundTint="#27AF2D"
+        app:layout_constraintBottom_toBottomOf="@id/buttonUsePickaxe"
+        app:layout_constraintTop_toTopOf="@id/buttonUsePickaxe"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/axeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Axe"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPickaxe" />
+    <TextView
+        android:id="@+id/axeCostText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cost: 0"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/axeText" />
+
+    <Button
+        android:id="@+id/buttonAxe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#27AF2D"
+        android:text="Buy Wooden"
+        android:onClick="upgradeAxe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/axeCostText" />
+
+    <ImageButton
+        android:id="@+id/buttonUsePickaxe"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:onClick="usePickaxe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/notool" />
+    <ImageButton
+        android:id="@+id/buttonUseAxe"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:onClick="useAxe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonUsePickaxe"
+        app:srcCompat="@drawable/notool" />
+
+    <Button
+        android:id="@+id/cheatbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHEAT BUTTON REMOVE AFTER VIDEO"
+        android:onClick="cheat"
+        android:backgroundTint="@android:color/holo_red_light"
+        app:layout_constraintBottom_toTopOf="@+id/buttonUsePickaxe"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/playerimage"
+        android:layout_width="46dp"
+        android:layout_height="108dp"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/noarmor" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        tools:layout_editor_absoluteX="1dp">
+
+        <fragment
+            android:id="@+id/fragment"
+            android:name="com.boredaviraj.finalproject.CoinsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
